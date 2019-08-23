@@ -41,12 +41,10 @@ for i, j, distances in roads:
     ways[j + ' to ' + i] = distances
 print(ways)
 
-route = []
-shortpath = None
-shortdistance = None
-
+# to make route
 for index, i in enumerate(names):
     distance = 0
+    route = []
     s = i + ' -> '
     for j in names:
         if i == j:
@@ -55,6 +53,9 @@ for index, i in enumerate(names):
         s = s + j + ' -> '
     route.append((s, distance))
 
+# To find shortestes path
+    shortpath = None
+    shortdistance = None
     if index == 0:
         shortpath = s
         shortdistance = distance
